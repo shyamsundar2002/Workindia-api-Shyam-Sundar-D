@@ -6,10 +6,10 @@ import random
 
 app = Flask(__name__)
 
-# Database configuration (you can replace this with your MySQL configuration)
+# Database configuration 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sample1.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['JWT_SECRET_KEY'] = 'your-actual-secret-key'
+app.config['JWT_SECRET_KEY'] = 'your-secret-key'
 
 db = SQLAlchemy(app)
 jwt = JWTManager(app)
